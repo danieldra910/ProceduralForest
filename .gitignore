@@ -2,6 +2,7 @@ ProceduralForest.Unity/Library
 ProceduralForest.Unity/Logs
 ProceduralForest.Unity/.vsconfig
 ProceduralForest/*.sln
+ProceduralForest.Unity/*.sln
 ProceduralForest.Unity/*.csproj
 ProceduralForest.Unity/Temp
 .vs
