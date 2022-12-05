@@ -13,7 +13,7 @@ public class ForestGenerator : MonoBehaviour
 
     public Item[] Items;
     // Start is called before the first frame update
-    void Start()
+    public void GenerateForest(float[,] heightMap)
     {
         for (int x = 0; x<ForestSize; x+= ItemSpacing)
         {
@@ -24,7 +24,7 @@ public class ForestGenerator : MonoBehaviour
                     Item item = Items[i];
                     if (item.CanPlace())
                     {
-                        Vector3 itemPos = new Vector3(x, 0f, z);
+                        Vector3 itemPos = new Vector3(x, heightMap[x,z], z);
 
                         Vector3 offsetPos = new Vector3(Random.Range(-Offset, Offset), 0, Random.Range(-Offset, Offset));
                         Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(Offset, 360f), Random.Range(0, 5f));

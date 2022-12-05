@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &210633091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772223fc663aa6447bde093f82c705af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForestSize: 25
+  ForestSize: 50
   ItemSpacing: 3
   Offset: 2
   Scale: 1
@@ -454,7 +454,7 @@ MonoBehaviour:
     - {fileID: 41922326170174303, guid: 826f27da13616a24fa72d1443337ab27, type: 3}
     - {fileID: 8533329702533263070, guid: 15aa3090885fe834c8e3b0d355dd9701, type: 3}
     - {fileID: 1617044952092786961, guid: 2f78fb4d43b595544b9fa21c3128fee9, type: 3}
-    density: 60
+    density: 65
   - Name: Stumps
     Prefabs:
     - {fileID: 9040856541730266042, guid: a5fc1ebcc36ffe84989fd2e125494f01, type: 3}
@@ -467,13 +467,23 @@ MonoBehaviour:
     - {fileID: 7263926146230023288, guid: bc934b34961ec3640a3e3f6b6250733e, type: 3}
     - {fileID: 3845161247643339448, guid: 443b626563d48104bb713f7692039e6c, type: 3}
     - {fileID: 3275795962561799930, guid: bf5b69263f91f494e94bdcd974a4ce23, type: 3}
-    density: 39
+    density: 44
   - Name: Branches
     Prefabs:
     - {fileID: 1885754504282940340, guid: 1577a4001abcb68409a07e15f25beb24, type: 3}
     - {fileID: 3485086866070129481, guid: fe63d5c1350971347b2540b5af96c072, type: 3}
     - {fileID: 1186671379196271323, guid: 895039cb262007e46abb2b87e9db3be9, type: 3}
-    density: 24
+    density: 25
+  - Name: Flowers
+    Prefabs:
+    - {fileID: 3995983535086855038, guid: 40b7ec96f7ea200428e5d39735f949d9, type: 3}
+    - {fileID: 8489361933063548226, guid: 8bdbad7f188890949bcabd53d8d276c6, type: 3}
+    - {fileID: 5936492498488115597, guid: 53cb8edd15cb4f446aff4e0474d4a935, type: 3}
+    density: 25
+  - Name: Plant
+    Prefabs:
+    - {fileID: 5551987153072171675, guid: d1fec4bb586d45f4db3c0ae7761becd0, type: 3}
+    density: 41
 --- !u!4 &1244805341
 Transform:
   m_ObjectHideFlags: 0
