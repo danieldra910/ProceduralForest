@@ -7,12 +7,9 @@ public class ForestGenerator : MonoBehaviour
     public int ForestSize = 25;
     public int ItemSpacing = 3;
 
-    public float Offset = 1f;
-
-    public float Scale = 1f;
 
     public Item[] Items;
-    // Start is called before the first frame update
+    
     public void GenerateForest(float[,] heightMap)
     {
         for (int x = 0; x<ForestSize; x+= ItemSpacing)
@@ -26,9 +23,9 @@ public class ForestGenerator : MonoBehaviour
                     {
                         Vector3 itemPos = new Vector3(x, heightMap[x,z], z);
 
-                        Vector3 offsetPos = new Vector3(Random.Range(-Offset, Offset), 0, Random.Range(-Offset, Offset));
-                        Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(Offset, 360f), Random.Range(0, 5f));
-                        Vector3 scale = Vector3.one * Random.Range(Scale * 0.75f, Scale * 1.25f);
+                        Vector3 offsetPos = new Vector3(Random.Range(-0.75f, 0.75f), 0, Random.Range(-0.75f, 0.75f));
+                        Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(0, 360f), Random.Range(0, 5f));
+                        Vector3 scale = Vector3.one * Random.Range(0.75f, 1.25f);
 
                         GameObject newItem = Instantiate(item.GetRandomObject());
                         newItem.transform.position = itemPos + offsetPos;
@@ -40,11 +37,5 @@ public class ForestGenerator : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
