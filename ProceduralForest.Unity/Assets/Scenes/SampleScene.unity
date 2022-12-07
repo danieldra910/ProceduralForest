@@ -393,7 +393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.23, z: -3.91}
+  m_LocalPosition: {x: 0, y: 26.69, z: -3.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,46 +442,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772223fc663aa6447bde093f82c705af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForestSize: 50
+  ForestSize: 100
   ItemSpacing: 3
+  Offset: 0.501
   Items:
+  - Name: Plants
+    Prefabs:
+    - {fileID: 8655872864704669980, guid: 15f2f61c86005324ab3630e8b1ba2747, type: 3}
+    - {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+    - {fileID: 51956900919061627, guid: 64ca9e302d16490429d2a0f349d72095, type: 3}
+    - {fileID: 2485608032364271217, guid: d483cda7cf88d5c43a719c90483764f1, type: 3}
+    - {fileID: 7970567918795744693, guid: 32d76070fd4329949a147d840b3a3fdf, type: 3}
+    density: 47
   - Name: Trees
     Prefabs:
-    - {fileID: 654017949697505259, guid: f834f066ccaee2344b9f7378b1bff208, type: 3}
-    - {fileID: 4781028586209336365, guid: 81e986888a339704396d4358983e70cd, type: 3}
-    - {fileID: 41922326170174303, guid: 826f27da13616a24fa72d1443337ab27, type: 3}
-    - {fileID: 8533329702533263070, guid: 15aa3090885fe834c8e3b0d355dd9701, type: 3}
-    - {fileID: 1617044952092786961, guid: 2f78fb4d43b595544b9fa21c3128fee9, type: 3}
-    density: 65
-  - Name: Stumps
-    Prefabs:
-    - {fileID: 9040856541730266042, guid: a5fc1ebcc36ffe84989fd2e125494f01, type: 3}
-    - {fileID: 539709604728716392, guid: 9b2f3580f3fb1b74388c91c8449ca9c6, type: 3}
-    - {fileID: 6244907666530730009, guid: a40da117864ab454fb639689f5857fce, type: 3}
-    density: 41
-  - Name: Rocks
-    Prefabs:
-    - {fileID: 689665944542078213, guid: 97056925719ca3b40af95158a504fd0d, type: 3}
-    - {fileID: 7263926146230023288, guid: bc934b34961ec3640a3e3f6b6250733e, type: 3}
-    - {fileID: 3845161247643339448, guid: 443b626563d48104bb713f7692039e6c, type: 3}
-    - {fileID: 3275795962561799930, guid: bf5b69263f91f494e94bdcd974a4ce23, type: 3}
-    density: 44
-  - Name: Branches
-    Prefabs:
-    - {fileID: 1885754504282940340, guid: 1577a4001abcb68409a07e15f25beb24, type: 3}
-    - {fileID: 3485086866070129481, guid: fe63d5c1350971347b2540b5af96c072, type: 3}
-    - {fileID: 1186671379196271323, guid: 895039cb262007e46abb2b87e9db3be9, type: 3}
-    density: 25
+    - {fileID: 4470068468865549885, guid: 06573cc19fb2e4a479092a9b4687b26c, type: 3}
+    - {fileID: 3655122399371990756, guid: b0b4c1c1dea91474e80b958446c76e5b, type: 3}
+    - {fileID: 1759554402409908225, guid: ab1a291faed69db41860cdd7b273c28d, type: 3}
+    - {fileID: 5603335818341881996, guid: 2e0bdbada749e6f48b12cd3f5cadc4f3, type: 3}
+    - {fileID: 7548925946568531736, guid: 5bec60f4b2bc22b4fa1dcca2ca18225f, type: 3}
+    density: 80
   - Name: Flowers
     Prefabs:
-    - {fileID: 3995983535086855038, guid: 40b7ec96f7ea200428e5d39735f949d9, type: 3}
-    - {fileID: 8489361933063548226, guid: 8bdbad7f188890949bcabd53d8d276c6, type: 3}
-    - {fileID: 5936492498488115597, guid: 53cb8edd15cb4f446aff4e0474d4a935, type: 3}
-    density: 25
-  - Name: Plant
+    - {fileID: 6790492165088344816, guid: a620afd0f970b5d41a1c9398ef276fd4, type: 3}
+    - {fileID: 3068801572827238613, guid: eb027d38027a0474f9ac33e96dc2db19, type: 3}
+    - {fileID: 4867889463058203156, guid: f550c80a288252347bddcb7465dc52df, type: 3}
+    density: 58
+  - Name: Stump
     Prefabs:
-    - {fileID: 5551987153072171675, guid: d1fec4bb586d45f4db3c0ae7761becd0, type: 3}
-    density: 41
+    - {fileID: 4375944474646908325, guid: 0c1dc9162f86dac488068fdcb3cf9715, type: 3}
+    - {fileID: 8293685147537449210, guid: 89c243b5404a4554985c1d903093fa00, type: 3}
+    - {fileID: 803495133056919301, guid: 284148a5985781342877af69bf326a2e, type: 3}
+    density: 48
+  - Name: SmallRocks
+    Prefabs:
+    - {fileID: 4676861133896682075, guid: 5affa63adb5a6e44ea78a6528f5b7331, type: 3}
+    - {fileID: 5744835204202968455, guid: 904c994af20bbf64493c06b741e63cb4, type: 3}
+    - {fileID: 6626462166124382093, guid: 8402ea267d711e6439b198a4526755b2, type: 3}
+    - {fileID: 6499632691131198808, guid: 03129de0bceaad4418f7f0375b4b3c38, type: 3}
+    - {fileID: 1576868528277753531, guid: e282280263592284b8c7c955e3517805, type: 3}
+    density: 48
+  - Name: SmallRocks
+    Prefabs:
+    - {fileID: 4676861133896682075, guid: 5affa63adb5a6e44ea78a6528f5b7331, type: 3}
+    - {fileID: 5744835204202968455, guid: 904c994af20bbf64493c06b741e63cb4, type: 3}
+    - {fileID: 6626462166124382093, guid: 8402ea267d711e6439b198a4526755b2, type: 3}
+    - {fileID: 6499632691131198808, guid: 03129de0bceaad4418f7f0375b4b3c38, type: 3}
+    - {fileID: 1576868528277753531, guid: e282280263592284b8c7c955e3517805, type: 3}
+    density: 69
+  - Name: Mushrooms
+    Prefabs:
+    - {fileID: 1799145172504711529, guid: 18af26af61ee8234caa44dc89f89d5cf, type: 3}
+    - {fileID: 4028192324028746158, guid: f9ba43b4d4d826f47aa990da47cf55a1, type: 3}
+    density: 73
+  - Name: Rocks
+    Prefabs:
+    - {fileID: 6573723043079136192, guid: ed18eacbf5bb4514d8a6b7a36c669520, type: 3}
+    - {fileID: 548334872500488905, guid: 4de9cfc6da7eef349881466ae54ea745, type: 3}
+    - {fileID: 5906073979545334107, guid: ed0cb6b83666ad94ea9fbf08b3ed5d46, type: 3}
+    density: 73
 --- !u!4 &1244805341
 Transform:
   m_ObjectHideFlags: 0
@@ -526,9 +545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb7bb9023ea84a4c819f823842cf941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TerrainSize: 50
-  TerrainScale: 5.45
-  HeightMultiplier: 3.73
+  TerrainSize: 100
+  TerrainScale: 10
+  HeightMultiplier: 8
   Forest: {fileID: 1244805340}
 --- !u!4 &1551730552
 Transform:

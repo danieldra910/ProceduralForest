@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TerrainGenerator : MonoBehaviour
 {
+    [Range(1,200)]
     public int TerrainSize;
     public float TerrainScale;
     public float HeightMultiplier;
@@ -12,14 +11,14 @@ public class TerrainGenerator : MonoBehaviour
 
     private float[,] _heightMap;
 
-    MeshFilter meshFilter;
-    MeshRenderer meshRenderer;
-    Material material;
+    MeshFilter _meshFilter;
+    MeshRenderer _meshRenderer;
+    Material _material;
     void Start()
     {
-        meshRenderer = gameObject.AddComponent<MeshRenderer>();
-        meshFilter = gameObject.AddComponent<MeshFilter>();
-        material = new Material(Shader.Find("Standard"));
+        _meshRenderer = gameObject.AddComponent<MeshRenderer>();
+        _meshFilter = gameObject.AddComponent<MeshFilter>();
+        _material = new Material(Shader.Find("Standard"));
         if(TerrainSize < Forest.ForestSize)
         {
             TerrainSize = Forest.ForestSize;
@@ -83,12 +82,12 @@ public class TerrainGenerator : MonoBehaviour
         mesh.uv = uvs;
 
         mesh.RecalculateNormals();
-        meshFilter.mesh = mesh;
+        _meshFilter.mesh = mesh;
 
         Texture2D texture = new Texture2D(1, 1);
         texture.SetPixel(0, 0, Color.green);
         texture.Apply();
-        material.mainTexture = texture;
-        meshRenderer.material = material;
+        _material.mainTexture = texture;
+        _meshRenderer.material = _material;
     }
 }
